@@ -1,2 +1,3 @@
-# notifier-motioneye
-notifier-motioneye
+```
+apt-get install inotify-tools
+```

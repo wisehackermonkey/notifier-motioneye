@@ -3,17 +3,27 @@
 ```
 git clone https://github.com/wisehackermonkey/notifier-motioneye.git
 
-# dietpi os only
-bash install.sh
+sudo bash install.sh 
+
 
 # Edit login-watcher.sh 
 run 
 >gpio readall
 Set PIN=< your raspberry pi pin>
+verify it worked 
+
+bash blink_led.sh <wPi Pin number>
+bash blink_led.sh 25
+
+>nano login-watcher.sh 
+EDiT
+PIN=25 to match your rpi's pin 
 
 
 # recommended way to run forever
-forever-service install login-watcher -s login-watcher.sh -f " -c 'bash'"
+edit `-o "25"` ->   `-o "8"`
+forever-service install login-watcher -s login-watcher.sh -f " -c 'bash'" -o "25"
+
 sudo service login-watcher start
 sudo service login-watcher status
 

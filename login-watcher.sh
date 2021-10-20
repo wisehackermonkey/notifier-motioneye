@@ -2,7 +2,7 @@
 
 # which gpio pin is used to blick the led
 # use `gpio readall` to get your pin out use `wPi` pin number here
-PIN=25
+PIN=$1
 if gpio -v > /tmp/log.log; then
 
     # set output pin to output

@@ -1,6 +1,7 @@
 #!/bin/bash
 read ~/.bashrc
-if dietpi-software install 70;then
+if dietpi-software --help ;then
+dietpi-software install 70
     sudo apt-get install wiringpi
 
 fi

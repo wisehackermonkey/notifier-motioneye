@@ -19,6 +19,9 @@ bash blink_led.sh 25
 EDiT
 PIN=25 to match your rpi's pin 
 
+```
+### [zapty/forever-service: Provision node script as a service via forever, allowing it to automatically start on boot, working across various Linux distros and OS](https://github.com/zapty/forever-service)
+```
 
 # recommended way to run forever
 edit `-o "25"` ->   `-o "8"`

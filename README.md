@@ -4,10 +4,20 @@
 # dietpi os only
 bash install.sh
 
+# Edit login-watcher.sh 
+run 
+>gpio readall
+Set PIN=< your raspberry pi pin>
+
+
 # recommended way to run forever
 forever-service install login-watcher -s login-watcher.sh -f " -c 'bash'"
 sudo service login-watcher start
 sudo service login-watcher status
+
+# delete serivce
+sudo forever-service delete login-watcher 
+
 ```
 #### Alternetivly
 ```

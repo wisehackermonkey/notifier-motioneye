@@ -1,6 +1,8 @@
 
 # start program
 ```
+git clone https://github.com/wisehackermonkey/notifier-motioneye.git
+
 # dietpi os only
 bash install.sh
 

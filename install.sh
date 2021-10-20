@@ -1,3 +1,8 @@
 #!/bin/bash
-dietpi-software install 70
-npm install forever -g
+read ~/.bashrc
+if dietpi-software install 70;then
+    sudo apt-get install wiringpi
+
+fi
+npm install -g forever 
+npm install -g forever-service

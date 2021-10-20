@@ -5,7 +5,7 @@
 dietpi-software install 70
 
 tmux -n watcher
-bash login-watcher.sh
+bash login-watcher.sh > ipaddress.log
 ```
 
 

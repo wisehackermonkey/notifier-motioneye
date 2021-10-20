@@ -1,6 +1,8 @@
+#!/bin/bash
+
 # which gpio pin is used to blick the led
 # use `gpio readall` to get your pin out use `wPi` pin number here
-PIN=15
+PIN=25
 if gpio -v > /tmp/log.log; then
 
     # set output pin to output

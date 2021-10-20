@@ -2,12 +2,31 @@
 # start program
 ```
 # dietpi os only
-dietpi-software install 70
+bash install.sh
 
-tmux -n watcher
-bash login-watcher.sh > ipaddress.log
+# recommended way to run forever
+forever-service install login-watcher -s login-watcher.sh -f " -c 'bash'"
+sudo service login-watcher start
+sudo service login-watcher status
+```
+#### Alternetivly
+```
+# manually run
+sudo apt-get install wiringpi
+npm install -g forever 
+npm install -g forever-service
+
+bash login-watcher.sh
+
 ```
 
+# Commands to interact with service login-watcher
+```
+Start   - "sudo service login-watcher start"
+Stop    - "sudo service login-watcher stop"
+Status  - "sudo service login-watcher status"
+Restart - "sudo service login-watcher restart"
+```
 
 
 

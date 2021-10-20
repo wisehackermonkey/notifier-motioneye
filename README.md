@@ -1,8 +1,23 @@
+
+# start program
+```
+# dietpi os only
+dietpi-software install 70
+
+tmux -n watcher
+bash login-watcher.sh
+```
+
+
+
+
+
 ```
 apt-get install inotify-tools
 ```
 
-
+# Scratch pad
+```
 journalctl -u motioneye -p info  | grep 'DEBUG:'
 journalctl -u motioneye --no-full
 journalctl -u motioneye  | grep 'DEBUG:'
@@ -74,16 +89,11 @@ gpio write 15 1
 git clone https://github.com/wisehackermonkey/notifier-motioneye.git
 git remote set-url origin https://wisehackermonkey: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@github.com/wisehackermonkey/notifier-motioneye.git
 
+journalctl -u motioneye --no-pager
 
 
-# start program
+journalctl -u motioneye --no-pager -g 'DEBUG: 304 GET /'
 ```
-tmux -n watcher
-bash login-watcher.sh
 
-new window
-tmux -n watcher-journal-scanning
-bash run-daemon.sh
-
-
-```
+# links
+[how journalctl works -- i used this extensivly](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs)
